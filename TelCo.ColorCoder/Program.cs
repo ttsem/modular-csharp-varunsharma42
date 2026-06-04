@@ -1,10 +1,14 @@
+using TelCo.ColorCoder.Tests;
+using TelCo.ColorCoder.Services;
+
 namespace TelCo.ColorCoder
 {
     class Program
     {
         static void Main(string[] args)
         {
-            ManualGenerator.PrintManual();
+            TelCoTests.RunTests();
+            ColorGenerator.PrintManual();
         }
     }
 }
