@@ -1,6 +1,7 @@
 using System;
+using TelCo.ColorCoder.Services;
 
-namespace TelCo.ColorCoder
+namespace TelCo.ColorCoder.Services
 {
     public static class ColorGenerator
     {
