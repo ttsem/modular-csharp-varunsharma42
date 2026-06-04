@@ -21,8 +21,8 @@ namespace TelCo.ColorCoder.Services
 
             int zeroBased = pairNumber - 1;
             return new ColorPair { 
-                majorColor = colorMapMajor[zeroBased / colorMapMinor.Length], 
-                minorColor = colorMapMinor[zeroBased % colorMapMinor.Length] 
+                MajorColor = MajorColors[zeroBased / MinorColors.Length], 
+                MinorColor = MinorColors[zeroBased % MinorColors.Length] 
             };
         }
         /// <summary>
@@ -30,15 +30,15 @@ namespace TelCo.ColorCoder.Services
         /// </summary>
         /// <param name="pair">Color pair with major and minor color</param>
         /// <returns></returns>
-        public static int GetPairNumberFromColor(ColorPair pair)
+       public static int GetPairNumberFromColor(ColorPair pair)
         {
-            int majorIndex = Array.IndexOf(colorMapMajor, pair.majorColor);
-            int minorIndex = Array.IndexOf(colorMapMinor, pair.minorColor);
+            int majorIndex = Array.IndexOf(MajorColors, pair.MajorColor);
+            int minorIndex = Array.IndexOf(MinorColors, pair.MinorColor);
 
             if (majorIndex == -1 || minorIndex == -1)
                 throw new ArgumentException("Unknown Colors");
 
-            return (majorIndex * colorMapMinor.Length) + (minorIndex + 1);
+            return (majorIndex * MinorColors.Length) + (minorIndex + 1);
         }
     }
 }
