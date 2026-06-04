@@ -1,13 +1,11 @@
-using System.Drawing;
-
 namespace TelCo.ColorCoder.Models
 {
-    internal class ColorPair
+    public class ColorPair 
     {
-        public Color majorColor;
-        public Color minorColor;
+        public System.Drawing.Color MajorColor { get; set; }
+        public System.Drawing.Color MinorColor { get; set; }
 
         public override string ToString() => 
-            string.Format("MajorColor:{0}, MinorColor:{1}", majorColor.Name, minorColor.Name);
+            $"MajorColor:{MajorColor.Name}, MinorColor:{MinorColor.Name}";
     }
 }
