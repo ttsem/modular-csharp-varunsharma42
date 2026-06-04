@@ -14,4 +14,4 @@ jobs:
 
     - name: Check size
       run: |
-        $HOME/.local/bin/lizard | bash .github/workflows/lpar.sh 50
+        $HOME/.local/bin/lizard --CCN 3
